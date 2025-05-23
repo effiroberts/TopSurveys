@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Rewarded for Your Opinion</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f8fa;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      padding: 20px;
+    }
+    .container {
+      background: white;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+    .live-counter {
+      font-size: 14px;
+      color: green;
+      margin-bottom: 10px;
+    }
+    .headline {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .subtext {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    .countdown {
+      font-size: 18px;
+      font-weight: bold;
+      color: red;
+      margin-bottom: 20px;
+    }
+    .cta-button {
+      background-color: #0056b3;
+      color: white;
+      border: none;
+      padding: 15px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .fake-comments {
+      margin-top: 20px;
+      font-size: 14px;
+      text-align: left;
+    }
+    .comment {
+      border-top: 1px solid #eee;
+      padding: 10px 0;
+    }
+  </style>
+  <script>
+    function startCountdown(duration) {
+      let timer = duration, minutes, seconds;
+      setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        document.getElementById('countdown').textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+          timer = 59;
+        }
+      }, 1000);
+    }
+
+    window.onload = function () {
+      startCountdown(120);
+    };
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="live-counter">🔥 Sarah just completed a survey · 13s ago</div>
+    <div class="headline">Get Rewarded for Your Opinion</div>
+    <div class="subtext">Answer simple questions and earn points you can redeem for gift cards!</div>
+    <div class="countdown">⏳ Offer expires in <span id="countdown">02:00</span></div>
+    <a href="https://directcpi.com/view.php?id=5539926&pub=3269252" class="cta-button">Start Earning Now</a>
+
+    <div class="fake-comments">
+      <div class="comment">👤 Emily: “Got my first $10 Amazon card in 2 days!”</div>
+      <div class="comment">👤 John: “Easy surveys and fast payouts 🔥”</div>
+      <div class="comment">👤 Amina: “Legit platform. I do surveys while watching Netflix.”</div>
+    </div>
+  </div>
+</body>
+</html>
